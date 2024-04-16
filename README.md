@@ -5,8 +5,7 @@
 1. Clone the project
 ```
     git clone https://github.com/pw-skills/pw-skills-website.git
-    cd pw-skills-website
-    npm install
+    
 
 ```
 2. Move into the directory
@@ -27,3 +26,42 @@ npm install
     npm run dev
 
 ```
+### Setup instructions for tailwind
+[Tailwind afficial instruction doc](https://tailwindcss.com/docs/guides/vite)
+
+1. Install tailwind
+
+```
+npm install -D tailwindcss postcss autoprefixer
+
+```
+
+2. Create tailwind.config.js file
+
+```
+npx tailwindcss init -p
+
+```
+3. Add the paths to all of your template files in your tailwind.config.js file.
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+};
+
+```
+4. Add the @tailwind directives for each of Tailwind’s layers to your CSS
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+
